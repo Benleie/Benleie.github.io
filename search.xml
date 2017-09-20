@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[reveal for PPT]]></title>
+    <url>%2F2017%2F09%2F15%2Freveal-for-PPT%2F</url>
+    <content type="text"><![CDATA[地球物理]]></content>
+      <tags>
+        <tag>show</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hhh]]></title>
+    <url>%2F2017%2F09%2F14%2Fhhh%2F</url>
+    <content type="text"><![CDATA[跟着这篇hexo教程,模仿桃子的博客,采用litten大神的主题yilia，搭建了这个破烂的二级域名站点hhh &nbsp;&nbsp;逃：( 想问如何在主题之下自定义页面，比如]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F09%2F14%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
