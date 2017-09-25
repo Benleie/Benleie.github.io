@@ -3,12 +3,12 @@
   <entry>
     <title><![CDATA[初探正则表达式]]></title>
     <url>%2F2017%2F09%2F25%2Frex%2F</url>
-    <content type="text"><![CDATA[####筛选时间显示12345678910function showTime() &#123; let now = new Date().toString() //Sat Sep 23 2017 09:45:01 GMT+0800 (中国标准时间) let left = /2017\s/, right = /GMT/; left.exec(now) now = RegExp.rightContext; //09:45:01 GMT+0800 (中国标准时间) right.exec(now) cl(RegExp.leftContext) //09:45:01&#125;showTime()]]></content>
+    <content type="text"><![CDATA[什么属性，分组等语法先统统不管，把遇到的问题解决再说。 筛选时间显示12345678910function showTime() &#123; let now = new Date().toString() //Sat Sep 23 2017 09:45:01 GMT+0800 (中国标准时间) let left = /2017\s/, right = /GMT/; left.exec(now) now = RegExp.rightContext; //09:45:01 GMT+0800 (中国标准时间) right.exec(now) cl(RegExp.leftContext) //09:45:01&#125;showTime() 统计字符串中数字出现的次数筛选出数字组成新的字符串即可1var num = str.replace(/[^\d]/g,'');]]></content>
   </entry>
   <entry>
     <title><![CDATA[game2048]]></title>
     <url>%2F2017%2F09%2F25%2Fgame2048%2F</url>
-    <content type="text"><![CDATA[接着把show做下去啊，花了一天时间，在GitHub上找了个五六star的现成项目，自己给添加了开始和结束的界面。可以试试呀]]></content>
+    <content type="text"><![CDATA[接着把show做下去啊，花了一天时间，在GitHub上找了个五六star的现成项目，自己给添加了开始和结束的界面。可以试试呀琢磨给开始界面绑定键盘事件。。]]></content>
   </entry>
   <entry>
     <title><![CDATA[reveal for PPT]]></title>
