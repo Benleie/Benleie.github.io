@@ -19,7 +19,7 @@ let game2048 = {
         this.setSize(height);
         
         $('ul').append(begin)
-        $('.begin').on('keyup',function(){
+        $('.begin').on('keyup click',function(){
         	$('.begin').remove()
         	This.init('body')
         	return false;

@@ -8,7 +8,7 @@
   <entry>
     <title><![CDATA[game2048]]></title>
     <url>%2F2017%2F09%2F25%2Fgame2048%2F</url>
-    <content type="text"><![CDATA[接着把show做下去啊，花了一天时间，在GitHub上找了个五六star的现成项目，自己给添加了开始和结束的界面。可以试试呀琢磨给开始界面绑定键盘事件。。]]></content>
+    <content type="text"><![CDATA[接着把show做下去啊，花了一天时间，在GitHub上找了个五六star的现成项目，自己给添加了开始和结束的界面。可以试试呀琢磨给开始界面绑定键盘事件。。 ####board简单的排行榜学习jquery的getJSON方法，搞不懂异步，最后用同步获取做了这个。chrome浏览器好像根本就不支持这个方法。firefox只是针对同步给出了警告。本地的JSON文件获取一直有“XML解析错误的警告”。还有就是页面需要继续完善，比如侧边栏，保持表格头部等等。]]></content>
   </entry>
   <entry>
     <title><![CDATA[reveal for PPT]]></title>
