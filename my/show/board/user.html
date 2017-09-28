@@ -45,7 +45,14 @@
 			font-size: 20px;
 			/*border: 1px solid red;*/
 		}
-		p span#all {
+		span {
+			margin: 0;
+			padding: 0;
+		}
+		p span.bold{
+			font-weight: bold;
+		}
+		p span.no {
 			display: none;
 		}
 		.even {
@@ -71,14 +78,14 @@
 		}
 	</style>
 	
-	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
 	
 	</head>
 	<body>
 	<div >
 		<h3>FCC排名前二十五的用户</h3>
 		<p>下面的排名记录了
-			<span id="recent">最近一个月以来</span><span id="all">建站以来</span>，活跃度最高的25位FCC用户的信息。
+			<span class="bold" id="recentp">最近一个月以来</span><span id="alltimep" class="no bold">建站以来</span>，活跃度最高的25位FCC用户的信息。
 		</p>
 		<p>数据来自FCC官方提供的API:
 			<a href="http://fcctop100.herokuapp.com/api/fccusers/top/recent" target="_blank">recent</a>
