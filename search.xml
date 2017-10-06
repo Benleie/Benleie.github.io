@@ -1,85 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[update]]></title>
-      <url>/2017/09/28/update/</url>
-      <content type="html"><![CDATA[<p>hexo啊，感觉还什么都不会。什么标签啊，分组啊，都没搞起来。文章更新也没试过，目前仅在手动修改日期的原始阶段。。</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 头大 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[初探正则表达式]]></title>
-      <url>/2017/09/25/rex/</url>
-      <content type="html"><![CDATA[<p>什么属性，分组等语法先统统不管，把遇到的问题解决再说。</p>
-<h4 id="筛选时间显示"><a href="#筛选时间显示" class="headerlink" title="筛选时间显示"></a>筛选时间显示</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">showTime</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>().toString()  <span class="comment">//Sat Sep 23 2017 09:45:01 GMT+0800 (中国标准时间)</span></div><div class="line">	<span class="keyword">let</span> left = <span class="regexp">/2017\s/</span>,</div><div class="line">		right = <span class="regexp">/GMT/</span>;</div><div class="line">	left.exec(now)</div><div class="line">	now = <span class="built_in">RegExp</span>.rightContext;    <span class="comment">//09:45:01 GMT+0800 (中国标准时间)</span></div><div class="line">	right.exec(now)</div><div class="line">	cl(<span class="built_in">RegExp</span>.leftContext)    <span class="comment">//09:45:01</span></div><div class="line">&#125;</div><div class="line">showTime()</div></pre></td></tr></table></figure>
-<h4 id="统计字符串中数字出现的次数"><a href="#统计字符串中数字出现的次数" class="headerlink" title="统计字符串中数字出现的次数"></a>统计字符串中数字出现的次数</h4><p>筛选出数字组成新的字符串即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num = str.replace(<span class="regexp">/[^\d]/g</span>,<span class="string">''</span>);</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[game2048]]></title>
-      <url>/2017/09/25/game2048/</url>
-      <content type="html"><![CDATA[<p>接着把show做下去啊，花了一天时间，在GitHub上找了个五六star的现成项目，自己给添加了开始和结束的界面。可以<a href="http://hhh.awecg.me/my/show/2048" target="_blank" rel="external">试试呀</a><br>琢磨给开始界面绑定键盘事件。。</p>
-<h4 id="board"><a href="#board" class="headerlink" title="board"></a>board</h4><p><a href="http://hhh.awecg.me/my/show/board/user.html" target="_blank" rel="external">简单的排行榜</a><br>学习jquery的getJSON方法，搞不懂异步，最后用同步获取做了这个。chrome浏览器好像根本就不支持这个方法。firefox只是针对同步给出了警告。<br>本地的JSON文件获取一直有“XML解析错误的警告”。<br>还有就是页面需要继续完善，比如侧边栏，保持表格头部等等。</p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[reveal for PPT]]></title>
-      <url>/2017/09/20/reveal-for-PPT/</url>
-      <content type="html"><![CDATA[<h3 id="使用reveal-js"><a href="#使用reveal-js" class="headerlink" title="使用reveal.js"></a>使用reveal.js</h3><p>之前幻想过这种操作。正好有人已经实现了。火速拿来玩玩。专选课的演讲就是它了！<a href="http://hhh.awecg.me/my/show/reveal/" target="_blank" rel="external">地球物理</a><br>展示那天，下午赶着做这个PPT，而且遇到了点麻烦，就来不及预演了。结果本来要求十分钟以上的演讲被我磕磕绊绊折腾了将近四十分钟。<br>等讲完最后一页，跑下讲台，回到座，发现嗓子哑了[微笑脸]</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> show </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[hhh]]></title>
-      <url>/2017/09/14/hhh/</url>
-      <content type="html"><![CDATA[<p>跟着这篇<a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">hexo教程</a>,模仿桃子的<a href="http://taozit.com/" target="_blank" rel="external">博客</a>,采用<a href="http://litten.me/" target="_blank" rel="external">litten大神</a>的主题<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a>，搭建了这个破烂的二级域名站点<a href="http://hhh.awecg.me/" target="_blank" rel="external">hhh</a>  &nbsp;&nbsp;逃：(</p>
-<p>想问如何在主题之下自定义页面，<a href="http://hhh.awecg.me/my/666" target="_blank" rel="external">比如</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2017/09/14/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[update]]></title>
+    <url>%2F2017%2F09%2F28%2Fupdate%2F</url>
+    <content type="text"><![CDATA[hexo啊，感觉还什么都不会。什么标签啊，分组啊，都没搞起来。文章更新也没试过，目前仅在手动修改日期的原始阶段。。]]></content>
+      <tags>
+        <tag>头大</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[初探正则表达式]]></title>
+    <url>%2F2017%2F09%2F25%2Frex%2F</url>
+    <content type="text"><![CDATA[什么属性，分组等语法先统统不管，把遇到的问题解决再说。 筛选时间显示12345678910function showTime() &#123; let now = new Date().toString() //Sat Sep 23 2017 09:45:01 GMT+0800 (中国标准时间) let left = /2017\s/, right = /GMT/; left.exec(now) now = RegExp.rightContext; //09:45:01 GMT+0800 (中国标准时间) right.exec(now) cl(RegExp.leftContext) //09:45:01&#125;showTime() 统计字符串中数字出现的次数筛选出数字组成新的字符串即可1var num = str.replace(/[^\d]/g,'');]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[game2048]]></title>
+    <url>%2F2017%2F09%2F25%2Fgame2048%2F</url>
+    <content type="text"><![CDATA[接着把show做下去啊，花了一天时间，在GitHub上找了个五六star的现成项目，自己给添加了开始和结束的界面。可以试试呀琢磨给开始界面绑定键盘事件。。 board简单的排行榜学习jquery的getJSON方法，搞不懂异步，最后用同步获取做了这个。chrome浏览器好像根本就不支持这个方法。firefox只是针对同步给出了警告。本地的JSON文件获取一直有“XML解析错误的警告”。还有就是页面需要继续完善，比如侧边栏，保持表格头部等等。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[reveal for PPT]]></title>
+    <url>%2F2017%2F09%2F20%2Freveal-for-PPT%2F</url>
+    <content type="text"><![CDATA[使用reveal.js之前幻想过这种操作。正好有人已经实现了。火速拿来玩玩。专选课的演讲就是它了！地球物理展示那天，下午赶着做这个PPT，而且遇到了点麻烦，就来不及预演了。结果本来要求十分钟以上的演讲被我磕磕绊绊折腾了将近四十分钟。等讲完最后一页，跑下讲台，回到座，发现嗓子哑了[微笑脸]]]></content>
+      <tags>
+        <tag>show</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hhh]]></title>
+    <url>%2F2017%2F09%2F14%2Fhhh%2F</url>
+    <content type="text"><![CDATA[跟着这篇hexo教程,模仿桃子的博客,采用litten大神的主题yilia，搭建了这个破烂的二级域名站点hhh &nbsp;&nbsp;逃：( 想问如何在主题之下自定义页面，比如]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F09%2F14%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
 </search>
