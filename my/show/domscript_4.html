@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>galary</title>
+	<style type="text/css">
+		body {
+			margin: 0 5%;
+			padding: 0;
+			background-color: wheat;
+			/*position: relative;*/
+		}
+		h1 {
+			color: #333;
+		}
+		a {
+			text-decoration: none;
+			color: #c60;
+			font-weight: bold;
+			/*background-color: transparent;*/
+		}
+		.aside {
+			position: absolute;
+			right: 0;
+			width: 20%
+		}
+		ul {
+			padding: 0;
+			list-style-type: none;
+		}
+		li {
+			padding: 0.4em;
+		}
+		img {
+			position: absolute;
+			bottom: 20px;
+			right: 30%;
+			margin: 0;
+			/*margin-left: 10px;*/
+			/*padding: 0;*/
+			height:90%;
+		}
+	</style>
+</head>
+<body>
+	<div class="aside">
+		<h1>snapshot</h1>
+		<p id="description">请选择一张图片</p>
+		<ul>
+			<li><a href="http://i.imgur.com/HRtuQo8.jpg" title="日光下的椰子树">Palm</a></li>
+			
+			<li><a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508931373474&di=a4c0ac1e608e686e59f60f712f811b74&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D5930bfe300d162d991e36a5f79b6c399%2Ff3d3572c11dfa9ecd12ba73068d0f703918fc194.jpg" title="茶"">Tea</a></li>
+
+			<li><a href="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1878936920,1736086413&fm=200&gp=0.jpg" title="玫瑰">Rose</a></li>
+
+			<li><a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508931014233&di=0d97f345835b486e863d92a32bf85493&imgtype=0&src=http%3A%2F%2Fphotocdn.sohu.com%2F20070927%2FImg252389287.jpg" title="大奔">Big Ben</a></li>
+		</ul>
+		
+	</div>
+	
+	<img id="placeholder" src="http://i.imgur.com/HRtuQo8.jpg" alt="my image galary">
+	
+	<script type="text/javascript">
+		function showPic(whichPic){
+			var source = whichPic.getAttribute('href');
+			let placeholder = document.getElementById('placeholder');
+			placeholder.setAttribute('src',source);
+			var text = whichPic.getAttribute('title');
+			document.getElementById('description').firstChild.nodeValue = text;
+
+		}
+		let links = document.getElementsByTagName('ul')[0].getElementsByTagName('a');
+		for(let i = 0; i<links.length; i++){
+			links[i].onclick = function(){
+				showPic(this);
+				return false;
+			}
+		}
+		window.onload = function(){
+			console.log(document.getElementById('description').nodeType)
+		}
+		/*let ss = [1,2];
+		ss.map(v=>{
+			console.log('gg')
+			return v+1;
+		})
+		console.log(ss)*/
+	</script>
+</body>
+</html>
