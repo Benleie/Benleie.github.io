@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>barrage</title>
+	<link href="https://v3.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+	<div class="container border">
+		<h4 class="text-center">文逼伯德第一，武逼韦德第一</h4>
+		<div class="row show">
+			<div class="col-md-4">	
+				<img src="./image/they.webp" alt="arm folded in chest" class=" img-responsive">
+			</div>
+			<div class="col-md-4">	
+				<img src="./image/they.webp" alt="arm folded in chest" class=" img-responsive">
+			</div>
+			<div class="col-md-4">	
+				<img src="./image/they.webp" alt="arm folded in chest" class=" img-responsive">
+			</div>
+		</div>
+		<h4 class="text-center">young king 孜孜不倦地学习着姿势</h4>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8 ">
+				<div class="input-group">
+				  <span class="input-group-addon" id="basic-addon1">---</span>
+				  <input type="text" class="form-control txt" placeholder="说点什么" aria-describedby="basic-addon1">
+				</div>
+				<br><br>
+				<div class="center-block" aria-label="..." style="width: 150px;">
+				  <button type="button" class="btn btn-primary  send">发射</button>
+				  <button type="button" class="btn btn-danger   clear">清屏</button>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		
+	</div>
+
+	
+	
+
+
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+
+		var data = [
+        	"富强","民主","文明","和谐",
+        	"自由","平等","公正","法治",
+        	"爱国","敬业","诚信","友善"
+        	]
+        var arr = [];
+        for(let i = 0; i<data.length; i++) 
+        	arr.push(data[i]);
+
+        $(".send").click(function() {
+            var text = $(".txt").val();
+            arr.push(text);
+            $(".txt").val('');
+        });
+		$(".txt").keypress(function(event) {
+            if (event.keyCode == "13") {
+                $(".send").trigger('click');
+            }
+        });
+        $(".clear").click(function() {
+            arr = [];
+            $('.show p').empty();
+        });
+
+        
+
+
+		var topMin = $('.show').offset().top;
+        var topMax = topMin + $('.show').height();
+        var _top = topMin;
+        // console.log(arr)
+        var moveObj = function(obj) {
+            var _left = $('.show').width() - obj.width();  
+            _top = _top + 50;
+            if (_top > (topMax - 50)) {
+                _top = topMin;
+            }
+            obj.css({
+                left: _left,
+                top: _top,
+                color: getRandomColor()
+            });
+            var time = 10000 + 10000 * Math.random();
+            obj.animate({
+                // left: "-" + _left + "px"
+                left: $(".show").offset().left + "px"
+            }, time , function() {
+                obj.remove();
+            });
+        }
+
+        var getRandomColor = function() {
+            return '#' + (function(h) {
+                return new Array(7 - h.length).join("0") + h
+            })((Math.random() * 0x1000000 << 0).toString(16))
+        }
+
+        var getAndRun = function() {
+            if (arr.length > 0) {
+                var n = Math.floor(Math.random() * arr.length + 1) - 1;
+                var textObj = $("<p>" + arr[n] + "</p>");
+                $(".show").append(textObj);
+                moveObj(textObj);
+            }
+
+            setTimeout(getAndRun, 2000);
+
+        }
+
+        jQuery.fx.interval = 50;
+        getAndRun();
+        console.log($('.show').width())
+	</script>
+</body>
+</html>
