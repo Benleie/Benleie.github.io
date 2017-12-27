@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>alarm clock</title>
+	<style type="text/css">
+		a {
+			text-decoration: none;
+			color: olive;
+		}
+	</style>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div class="main">
+		<p>看到<a href="http://www.naobiao.com/">闹表网</a> 的闹钟功能，想模仿。</p>
+
+		<table border="0" align="center" cellpadding="0" cellspacing="0">
+		  <tr>
+		    <td id="showTime1" style="font-size:70px;letter-spacing: 10px;font-family: Arial, Helvetica, sans-serif;">00:00:00</td>
+		    
+		  </tr>
+		  <tr>
+		  	<td id="showTime2" style="font-size:70px;letter-spacing: 10px;font-family: Arial, Helvetica, sans-serif;">00:00:00</td>
+		  </tr>
+		  <tr>
+		  	<td id="showTime3" style="font-size:70px;letter-spacing: 10px;font-family: Arial, Helvetica, sans-serif;">{{ now }} </td>
+		  </tr>
+		</table>
+
+	</div>
+
+	<script type="text/javascript">
+		var a = new Date();
+		var time = toTwo(a.getHours()) + ":" + toTwo(a.getMinutes()) + ":" + toTwo(a.getSeconds());
+
+		var vm = new Vue({
+			el: "#showTime3",
+			data: {
+				now : time
+			},
+			computed: {
+				time: time
+			}
+		})
+
+
+
+
+		//递归的方法动态显示时间，是不是很蠢？
+		function showTime1(){
+			var a = new Date(),
+			    time = toTwo(a.getHours()) + ":" + toTwo(a.getMinutes()) + ":" + toTwo(a.getSeconds());
+
+			document.getElementById("showTime1").innerHTML = time;
+			window.setTimeout("showTime1()",1000);
+		}
+		showTime1();
+
+
+		var showTime2 = function (){
+			var a = new Date();
+			document.getElementById("showTime2").innerHTML = toTwo(a.getHours()) + ":" + toTwo(a.getMinutes()) + ":" + toTwo(a.getSeconds());
+		}
+		showTime2()
+		setInterval("showTime2()",1000);
+
+
+
+		function toTwo(a) {
+		    if (a < 10) {
+		        a = "0" + a
+		    }
+		    return a
+		}
+		
+	</script>
+</body>
+</html>

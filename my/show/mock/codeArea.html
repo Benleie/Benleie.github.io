@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>G</title>
+	<style type="text/css">
+		body
+		{
+			background: wheat;
+		}
+		.code {
+			width: 80%;
+			border: 1px solid gray;
+
+		}
+		 .code pre {
+			height: 200px;
+			overflow: auto;
+		} 
+		.code, .code pre {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="MDN">
+		<p id="para">Some text here</p>
+	  	<button>blue</button>
+	  	<button onclick="changeColor('red');">red</button>
+	</div>
+	<hr>
+
+	<h2><a href="http://www.zhangxinxu.com/wordpress/2012/04/js-dom%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6/">仿写代码框</a></h2>
+	<button id="btn1">点击这里完整显示</button>
+	<div class="code">
+		<pre id="pre1" style="height:200px;">
+			var EventTarget = function() {
+			    this._listener = {};
+			};
+
+			EventTarget.prototype = {
+			    constructor: this,
+			    addEvent: function(type, fn) {
+			        if (typeof type === "string" && typeof fn === "function") {
+			            if (typeof this._listener[type] === "undefined") {
+			                this._listener[type] = [fn];
+			            } else {
+			                this._listener[type].push(fn);    
+			            }
+			        }
+			        return this;
+			    },
+			    addEvents: function(obj) {
+			        obj = typeof obj === "object"? obj : {};
+			        var type;
+			        for (type in obj) {
+			            if ( type && typeof obj[type] === "function") {
+			                this.addEvent(type, obj[type]);    
+			            }
+			        }
+			        return this;
+			    },
+			    fireEvent: function(type) {
+			        if (type && this._listener[type]) {
+			            var events = {
+			                type: type,
+			                target: this    
+			            };
+			            
+			            for (var length = this._listener[type].length, start=0; start < length; start+=1) {
+			                this._listener[type][start].call(this, events);
+			            }
+			        }
+			        return this;
+			    },
+			    fireEvents: function(array) {
+			        if (array instanceof Array) {
+			            for (var i=0, length = array.length; i < length; i+=1) {
+			                this.fireEvent(array[i]);
+			            }
+			        }
+			        return this;
+			    },
+			    removeEvent: function(type, key) {
+			        var listeners = this._listener[type];
+			        if (listeners instanceof Array) {
+			            if (typeof key === "function") {
+			                for (var i=0, length=listeners.length; i< length; i+=1){
+			                    if (listeners[i] === key){
+			                        listeners.splice(i, 1);
+			                        break;
+			                    }
+			                }
+			            } else if (key instanceof Array) {
+			                for (var lis=0, lenkey = key.length; lis < lenkey; lis+=1) {
+			                    this.removeEvent(type, key[lenkey]);
+			                }
+			            } else {
+			                delete this._listener[type];
+			            }
+			        }
+			        return this;
+			    },
+			    removeEvents: function(params) {
+			        if (params instanceof Array) {
+			            for (var i=0, length = params.length; i < length; i+=1) {
+			                this.removeEvent(params[i]);
+			            }    
+			        } else if (typeof params === "object") {
+			            for (var type in params) {
+			                this.removeEvent(type, params[type]);    
+			            }
+			        }
+			        return this;    
+			    }
+			};
+
+		</pre>
+		
+	</div>
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		
+
+		var btn = document.getElementById('btn1'),
+		 	pre = document.getElementById('pre1');
+
+		+function(btn, pre){
+			console.log("danger!!")
+			btn.onclick = function() {
+		        if (/200/.test(pre.style.height)) {
+		            pre.style.height = "auto";
+		            this.innerHTML = this.innerHTML.replace("完整显示", "进行收起");
+		        } else {
+		            pre.style.height = "200px";
+		            this.innerHTML = this.innerHTML.replace("进行收起", "完整显示");
+		        }
+		        return false;
+		    }
+
+		}(btn, pre)
+		
+		
+
+		
+		function changeColor(newColor) {
+
+		  var elem = document.getElementById('para');
+		  elem.style.color = newColor;
+		  console.log('changeColor',elem === document.getElementById('para'))
+		}
+
+		var btn1 = document.getElementsByTagName('button')[0];
+		console.log(btn1);
+		
+
+		btn1.onclick = function(){
+			changeColor("blue");
+		}
+			
+		
+
+
+
+	</script>
+</body>
+</html>
