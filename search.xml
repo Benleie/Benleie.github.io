@@ -6,6 +6,11 @@
     <content type="text"><![CDATA[渣浪的node部署指南说的很清楚。无非就是注册一个SAE账号，用git提交一个远程库。确实方便。]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>%2F2018%2F01%2F22%2Fnode%2F</url>
+    <content type="text"><![CDATA[debug模式 backtrace, bt - Print backtrace of current execution frame显示调用栈，不包括require restart 快速重启 repl 交互式 c继续 module.exports与exportsexports.camelCaseKeys = require(‘./camel_case_keys’);module.exports = entry; require.resolve fs.readFileSync(path.join(__dirname, &#39;./assets/some-file.txt&#39;));等同于fs.readFileSync(require.resolve(&#39;./assets/some-file.txt&#39;)); 省略了一道检查文件是否存在的工序 (fs.exists).]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[again]]></title>
     <url>%2F2018%2F01%2F22%2Fhexo%2F</url>
     <content type="text"><![CDATA[hexo.js是从哪里开始加载的？我不得不对此感到疑惑？hexo命令不显示hexo.js中的console.log!!!与node debug ./node_modules/hexo/bin/hexo g略有不同hexo.js完成的任务主要有new Hexo(),init(),exit(). 配置hexo. hexo init即可快速开始一个库，如果仅仅是调试的话用他就够了。安装hexo-deploy-git后，created a lockfile as package-lock.json. You should commit this file。这是npm模仿yarn的版本锁定，可以还原开发环境。 当我把config中的url的root设为空时，Cannot read property &#39;replace&#39; of nullhexo\lib\hexo\load_config.js:34:30.原来是这玩意儿在解释YHML，加载配置。 github显示还是benleie在提交这个项目？？修改config的用户名解决 如何设置url的root，让它成功到blog目录？？新建一个库,开启github pages即可。问题很多 hexo加载了hexo-renderer-stylus模块来编译CSS，但是yilia使用了SCSS??]]></content>
@@ -13,11 +18,6 @@
         <tag>hexo</tag>
         <tag>node.js</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2018%2F01%2F22%2Fnode%2F</url>
-    <content type="text"><![CDATA[debug模式 backtrace, bt - Print backtrace of current execution frame显示调用栈，不包括require restart 快速重启 repl 交互式 c继续 module.exports与exportsexports.camelCaseKeys = require(‘./camel_case_keys’);module.exports = entry; require.resolve fs.readFileSync(path.join(__dirname, &#39;./assets/some-file.txt&#39;));等同于fs.readFileSync(require.resolve(&#39;./assets/some-file.txt&#39;)); 省略了一道检查文件是否存在的工序 (fs.exists).]]></content>
   </entry>
   <entry>
     <title><![CDATA[gitbash]]></title>
@@ -37,14 +37,14 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F01%2F22%2FBoxModel%2F</url>
-    <content type="text"><![CDATA[图解CSS几种盒模型：inline,inline-block,block,table,absolute position,float， list-item影响盒模型的属性:display,postion,float, width,height,margin,padding,border box-sizing:border-box也包含了padding; 自由缩放属性 resize 针对具有overflow属性的容器元素，textarea自带 outline 不影响盒模型 获得焦点时]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[echarts]]></title>
     <url>%2F2018%2F01%2F22%2Fecharts%2F</url>
     <content type="text"><![CDATA[自GNSS实习中遇到数据需要统计为柱状图的问题，用了百度的echarts.需要多条统计项时，可以要color: [&#39;olive&#39;,&#39;red&#39;,&#39;blue&#39;]来区分颜色。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F01%2F22%2FBoxModel%2F</url>
+    <content type="text"><![CDATA[图解CSS几种盒模型：inline,inline-block,block,table,absolute position,float， list-item影响盒模型的属性:display,postion,float, width,height,margin,padding,border box-sizing:border-box也包含了padding; 自由缩放属性 resize 针对具有overflow属性的容器元素，textarea自带 outline 不影响盒模型 获得焦点时]]></content>
   </entry>
   <entry>
     <title><![CDATA[bootstrap]]></title>
@@ -67,14 +67,6 @@
     <title></title>
     <url>%2F2018%2F01%2F22%2FblueBirld%2F</url>
     <content type="text"><![CDATA[asCallback callback可以为null 可以接收error]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[sematic]]></title>
-    <url>%2F2018%2F01%2F22%2Fsemantic%2F</url>
-    <content type="text"><![CDATA[同一个div的button可以自动实现水平布局。button是可变元素，可以变为块级元素或内联元素。 设计了一些icon，可以在i中自由调用]]></content>
-      <tags>
-        <tag>UI</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[使用hexo]]></title>
