@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2018%2F01%2F22%2Fsae%2F</url>
-    <content type="text"><![CDATA[渣浪的node部署指南说的很清楚。无非就是注册一个SAE账号，用git提交一个远程库。确实方便。]]></content>
+    <title><![CDATA[ajax]]></title>
+    <url>%2F2018%2F01%2F30%2Fajax%2F</url>
+    <content type="text"><![CDATA[关于ajax，json的后端数据处理。 ajax与HTTP请求的区别 JSON-server,superagent,axios的作用区别？ axios:Promise based HTTP client for the browser and node.js理由:jquery自3.0版本才支持Promise,如果你只是想使用jquery的ajax的话引入整个jquery是很大的负担，所以axios是一个很好的工具。(axios代码量只有jquery的十分之一，减少执行时间)。同时提供了其他features。]]></content>
+      <tags>
+        <tag>javascript</tag>
+        <tag>http</tag>
+      </tags>
   </entry>
   <entry>
     <title></title>
@@ -55,25 +59,19 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ajax]]></title>
-    <url>%2F2018%2F01%2F22%2Fajax%2F</url>
-    <content type="text"><![CDATA[关于ajax，json的后端数据处理。 ajax与HTTP请求的区别 JSON-server,superagent,axios的作用区别？ axios:Promise based HTTP client for the browser and node.js理由:jquery自3.0版本才支持Promise,如果你只是想使用jquery的ajax的话引入整个jquery是很大的负担，所以axios是一个很好的工具。(axios代码量只有jquery的十分之一，减少执行时间)。同时提供了其他features。]]></content>
-      <tags>
-        <tag>javascript</tag>
-        <tag>http</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2018%2F01%2F22%2FblueBirld%2F</url>
-    <content type="text"><![CDATA[asCallback callback可以为null 可以接收error]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[使用hexo]]></title>
     <url>%2F2018%2F01%2F22%2Fusing-hexo%2F</url>
     <content type="text"><![CDATA[hexo server模式可以在localhost预览站点；在修改文章之后,直接在浏览器刷新就能查看，相当于有个watch的功能 图片 主题yilia将&lt;!-- more --&gt;添加到写作的md中，即可在你想要的位置截断。在config设置excerpt_link可以修改其内容 分类？ archive？ 文章删除后tags还在？ 显示文章更新日期]]></content>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[bluebird使用]]></title>
+    <url>%2F2018%2F01%2F20%2FblueBirld%2F</url>
+    <content type="text"><![CDATA[asCallback callback可以为null 可以接收error]]></content>
+      <tags>
+        <tag>库</tag>
       </tags>
   </entry>
   <entry>
@@ -112,5 +110,9 @@
     <title><![CDATA[大功告成，叭！]]></title>
     <url>%2F2017%2F09%2F14%2Fhhh%2F</url>
     <content type="text"><![CDATA[跟着这篇hexo教程,模仿桃子的博客,采用litten大神的主题yilia，搭建了这个破烂的二级域名站点hhh &nbsp;&nbsp;逃：( 想问如何在主题之下自定义页面，比如]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>挣扎</tag>
+      </tags>
   </entry>
 </search>

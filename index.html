@@ -156,12 +156,33 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-sae" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ajax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/30/ajax/">ajax</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/30/ajax/" class="archive-article-date">
+  	<time datetime="2018-01-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-30</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>渣浪的node部署指南说的很清楚。无非就是注册一个SAE账号，用git提交一个远程库。确实方便。</p>
+        <p>关于ajax，json的后端数据处理。</p>
+<ul>
+<li>ajax与HTTP请求的区别</li>
+</ul>
+<h3 id="JSON-server-superagent-axios的作用区别？"><a href="#JSON-server-superagent-axios的作用区别？" class="headerlink" title="JSON-server,superagent,axios的作用区别？"></a>JSON-server,superagent,axios的作用区别？</h3><ul>
+<li>axios:Promise based HTTP client for the browser and node.js<br>理由:jquery自3.0版本才支持Promise,如果你只是想使用jquery的ajax的话引入整个jquery是很大的负担，所以axios是一个很好的工具。(axios代码量只有jquery的十分之一，减少执行时间)。同时提供了其他features。</li>
+</ul>
 
       
 
@@ -170,11 +191,26 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/22/sae/">阅读全文 >></a>
+          <a class="article-more-a" href="/2018/01/30/ajax/">阅读全文 >></a>
         </p>
       
 
@@ -213,10 +249,11 @@
 <li>backtrace, bt - Print backtrace of current execution frame显示调用栈，不包括require</li>
 <li>restart 快速重启</li>
 <li>repl 交互式</li>
-<li>c继续</li>
-</ul>
-<ul>
-<li>module.exports与exports<br>exports.camelCaseKeys = require(‘./camel_case_keys’);<br>module.exports = entry;</li>
+<li><p>c继续</p>
+<!-- show -->
+</li>
+<li><p>module.exports与exports<br>exports.camelCaseKeys = require(‘./camel_case_keys’);<br>module.exports = entry;</p>
+</li>
 </ul>
 <h2 id="require-resolve"><a href="#require-resolve" class="headerlink" title="require.resolve"></a>require.resolve</h2><ul>
 <li><code>fs.readFileSync(path.join(__dirname, &#39;./assets/some-file.txt&#39;));</code>等同于<code>fs.readFileSync(require.resolve(&#39;./assets/some-file.txt&#39;));</code></li>
@@ -284,7 +321,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="hexo-js是从哪里开始加载的？"><a href="#hexo-js是从哪里开始加载的？" class="headerlink" title="hexo.js是从哪里开始加载的？"></a>hexo.js是从哪里开始加载的？</h3><p>我不得不对此感到疑惑？<br>hexo命令不显示hexo.js中的console.log!!!与<code>node debug ./node_modules/hexo/bin/hexo g</code>略有不同<br>hexo.js完成的任务主要有new Hexo(),init(),exit().</p>
+        <h3 id="hexo-js是从哪里开始加载的？"><a href="#hexo-js是从哪里开始加载的？" class="headerlink" title="hexo.js是从哪里开始加载的？"></a>hexo.js是从哪里开始加载的？</h3><p>我不得不对此感到疑惑？<br>hexo命令不显示hexo.js中的console.log!!!与<code>node debug ./node_modules/hexo/bin/hexo g</code>略有不同<br>hexo.js完成的任务主要有new Hexo(),init(),exit().<br><!-- show  --></p>
 <h2 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo."></a>配置hexo.</h2><ul>
 <li>hexo init即可快速开始一个库，如果仅仅是调试的话用他就够了。<br>安装hexo-deploy-git后，created a lockfile as package-lock.json. You should commit this file。<br>这是npm模仿yarn的版本锁定，可以还原开发环境。</li>
 </ul>
@@ -474,8 +511,9 @@
       
         <p>node debug ./node_modules/hexo/bin/hexo g</p>
 <ul>
-<li>hexo g –debug死循环 </li>
+<li>hexo g –debug死循环</li>
 </ul>
+<!--  show  -->
 <h2 id="loadPlugin"><a href="#loadPlugin" class="headerlink" title="loadPlugin"></a>loadPlugin</h2><ul>
 <li>是谁在调用loadPlugin?  load_plugins.js!<br>loadModuleList将package.json中的dev提取出来，在loadModules中调用ctx.loadPlugin(path)进行map.<br>至于loadPlugin,既是module又是vm的，很吓人。</li>
 <li>runInThisContext<br>var fn = vm.runInThisContext(script, path);<br>是在\hexo-deployer-git\index.js的path下执行它自己：hexo.extend.deployer.register(‘git’, require(‘./lib/deployer’));register结束后可以在self.extend.deployer.store访问到这么一个东西：<br><code>{ git: [Function: val] }</code>.</li>
@@ -811,6 +849,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">挣扎</a>
               </li>
             
             <div class="clearfix"></div>
