@@ -8,16 +8,17 @@
   <link rel="dns-prefetch" href="//hhh.awe.me">
   <title>初探正则表达式 | hhh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么属性，分组等语法先统统不管，把遇到的问题解决再说。 筛选时间显示12345678910function showTime() &amp;#123;	let now = new Date().toString()  //Sat Sep 23 2017 09:45:01 GMT+0800 (中国标准时间)	let left = /2017\s/,		right = /GMT/;	left.exec(now">
+  <meta name="description" content="什么属性，分组等语法先统统不管，把遇到的问题解决再说。">
+<meta name="keywords" content="js,RegExp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初探正则表达式">
 <meta property="og:url" content="//hhh.awe.me/2017/09/25/rex/index.html">
 <meta property="og:site_name" content="hhh">
-<meta property="og:description" content="什么属性，分组等语法先统统不管，把遇到的问题解决再说。 筛选时间显示12345678910function showTime() &amp;#123;	let now = new Date().toString()  //Sat Sep 23 2017 09:45:01 GMT+0800 (中国标准时间)	let left = /2017\s/,		right = /GMT/;	left.exec(now">
-<meta property="og:updated_time" content="2017-09-25T11:06:32.344Z">
+<meta property="og:description" content="什么属性，分组等语法先统统不管，把遇到的问题解决再说。">
+<meta property="og:updated_time" content="2018-01-22T06:51:55.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初探正则表达式">
-<meta name="twitter:description" content="什么属性，分组等语法先统统不管，把遇到的问题解决再说。 筛选时间显示12345678910function showTime() &amp;#123;	let now = new Date().toString()  //Sat Sep 23 2017 09:45:01 GMT+0800 (中国标准时间)	let left = /2017\s/,		right = /GMT/;	left.exec(now">
+<meta name="twitter:description" content="什么属性，分组等语法先统统不管，把遇到的问题解决再说。">
   
     <link rel="alternative" href="/atom.xml" title="hhh" type="application/atom+xml">
   
@@ -176,6 +177,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>什么属性，分组等语法先统统不管，把遇到的问题解决再说。</p>
+<a id="more"></a>
 <h4 id="筛选时间显示"><a href="#筛选时间显示" class="headerlink" title="筛选时间显示"></a>筛选时间显示</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">showTime</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>().toString()  <span class="comment">//Sat Sep 23 2017 09:45:01 GMT+0800 (中国标准时间)</span></div><div class="line">	<span class="keyword">let</span> left = <span class="regexp">/2017\s/</span>,</div><div class="line">		right = <span class="regexp">/GMT/</span>;</div><div class="line">	left.exec(now)</div><div class="line">	now = <span class="built_in">RegExp</span>.rightContext;    <span class="comment">//09:45:01 GMT+0800 (中国标准时间)</span></div><div class="line">	right.exec(now)</div><div class="line">	cl(<span class="built_in">RegExp</span>.leftContext)    <span class="comment">//09:45:01</span></div><div class="line">&#125;</div><div class="line">showTime()</div></pre></td></tr></table></figure>
 <h4 id="统计字符串中数字出现的次数"><a href="#统计字符串中数字出现的次数" class="headerlink" title="统计字符串中数字出现的次数"></a>统计字符串中数字出现的次数</h4><p>筛选出数字组成新的字符串即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num = str.replace(<span class="regexp">/[^\d]/g</span>,<span class="string">''</span>);</div></pre></td></tr></table></figure></p>
 
@@ -207,6 +209,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">RegExp</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -271,11 +288,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/28/update/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/22/css/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          update
+          CSS展示
         
       </div>
     </a>
@@ -346,7 +363,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -409,6 +426,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">头大</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
