@@ -156,30 +156,363 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-using-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-sae" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>渣浪的node部署指南说的很清楚。无非就是注册一个SAE账号，用git提交一个远程库。确实方便。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/22/sae/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/22/using-hexo/">使用hexo</a>
+      <a class="article-title" href="/2018/01/22/hexo/">again</a>
     </h1>
   
 
         
-        <a href="/2018/01/22/using-hexo/" class="archive-article-date">
-  	<time datetime="2018-01-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
+        <a href="/2018/01/22/hexo/" class="archive-article-date">
+  	<time datetime="2018-01-22T08:15:30.985Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hexo server模式可以在localhost预览站点；<br>在修改文章之后,直接在浏览器刷新就能查看，相当于有个watch的功能<br>
+        <h3 id="hexo-js是从哪里开始加载的？"><a href="#hexo-js是从哪里开始加载的？" class="headerlink" title="hexo.js是从哪里开始加载的？"></a>hexo.js是从哪里开始加载的？</h3><p>我不得不对此感到疑惑？<br>hexo命令不显示hexo.js中的console.log!!!与<code>node debug ./node_modules/hexo/bin/hexo g</code>略有不同<br>hexo.js完成的任务主要有new Hexo(),init(),exit().</p>
+<h2 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo."></a>配置hexo.</h2><ul>
+<li>hexo init即可快速开始一个库，如果仅仅是调试的话用他就够了。<br>安装hexo-deploy-git后，created a lockfile as package-lock.json. You should commit this file。<br>这是npm模仿yarn的版本锁定，可以还原开发环境。</li>
+</ul>
+<ul>
+<li>当我把config中的url的root设为空时，<code>Cannot read property &#39;replace&#39; of null</code>hexo\lib\hexo\load_config.js:34:30.原来是这玩意儿在解释YHML，加载配置。</li>
+<li>github显示还是benleie在提交这个项目？？<br>修改config的用户名解决</li>
+<li>如何设置url的root，让它成功到blog目录？？<br>新建一个库,开启github pages即可。<h3 id="问题很多"><a href="#问题很多" class="headerlink" title="问题很多"></a>问题很多</h3></li>
+</ul>
+<ul>
+<li>hexo加载了hexo-renderer-stylus模块来编译CSS，但是yilia使用了SCSS??</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/22/hexo/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
         
-          <a class="article-more-a" href="/2018/01/22/using-hexo/#more">more >></a>
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
         
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-node" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="debug模式"><a href="#debug模式" class="headerlink" title="debug模式"></a>debug模式</h3><ul>
+<li>backtrace, bt - Print backtrace of current execution frame显示调用栈，不包括require</li>
+<li>restart 快速重启</li>
+<li>repl 交互式</li>
+<li>c继续</li>
+</ul>
+<ul>
+<li>module.exports与exports<br>exports.camelCaseKeys = require(‘./camel_case_keys’);<br>module.exports = entry;</li>
+</ul>
+<h2 id="require-resolve"><a href="#require-resolve" class="headerlink" title="require.resolve"></a>require.resolve</h2><ul>
+<li><code>fs.readFileSync(path.join(__dirname, &#39;./assets/some-file.txt&#39;));</code>等同于<code>fs.readFileSync(require.resolve(&#39;./assets/some-file.txt&#39;));</code></li>
+<li>省略了一道检查文件是否存在的工序 (fs.exists).</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/22/node/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-gitbash" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/22/gitbash/">gitbash</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/22/gitbash/" class="archive-article-date">
+  	<time datetime="2018-01-22T08:15:30.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="git-clone指定分支"><a href="#git-clone指定分支" class="headerlink" title="git clone指定分支"></a>git clone指定分支</h3><p>git clone -b refactor <a href="https://github.com/maroslaw/rainyday.js.git" target="_blank" rel="external">https://github.com/maroslaw/rainyday.js.git</a> stop</p>
+<h3 id="创建一个新库，很简单。"><a href="#创建一个新库，很简单。" class="headerlink" title="创建一个新库，很简单。"></a>创建一个新库，很简单。</h3><p>在官网new repo,然后github在你没有readme的时候会有提示页面，照做就行。<br>git init一下，在github网上 new repo，然后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">echo &quot;# awecg.github.io&quot; &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m &quot;first commit&quot;</div><div class="line">git remote add origin https://github.com/awecg/awecg.github.io.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
+<p>另:git pull –rebase origin master(如果创建库时生成了README.md，即README.md不在本地文件目录)</p>
+<h2 id="使用多个git账号"><a href="#使用多个git账号" class="headerlink" title="使用多个git账号"></a>使用多个git账号</h2><ul>
+<li>创建公钥和密钥<code>ssh-keygen -t rsa -f test -C &quot;test key&quot;</code>创建公钥和密钥</li>
+<li>$ ssh-agent bash<br>  $  ssh-add ~/.ssh/test<br>  Identity added: /c/Users/我/.ssh/test (/c/Users/我/.ssh/test)</li>
+<li><p>配置ssh的config文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div><div class="line">Hi Benleie! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+</li>
+<li><p>git remote set-url origin</p>
+</li>
+<li>git push -u origin master</li>
+</ul>
+<p>查看gitconfig   git config –list<br>查看远程仓库信息  git remote show origin<br>查看远程仓库 git remote -v</p>
+<h2 id="AUTOCRLF"><a href="#AUTOCRLF" class="headerlink" title="AUTOCRLF"></a>AUTOCRLF</h2><ul>
+<li><p>warning: LF will be replaced by CRLF in XXXXX.<br>The file will have its original line endings in your working directory.</p>
+</li>
+<li><p>关于autocrlf。windows系统下，如果git add提交到stage的文件时unix格式，就有上面的提示。<br>意思是core.autocrlf默认为true，提交到index后会自动转为lf endings，方便项目跨平台使用。</p>
+</li>
+<li>权宜之计：为了git bash不被这种提示刷屏，可以将true改为false，反正只是在windows下自己玩。</li>
+</ul>
+<p>commit阅读利器gitk</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">instruction</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/22/gitbash/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-generate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/22/generate/">generate</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/22/generate/" class="archive-article-date">
+  	<time datetime="2018-01-22T08:15:30.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>node debug ./node_modules/hexo/bin/hexo g</p>
+<ul>
+<li>hexo g –debug死循环 </li>
+</ul>
+<h2 id="loadPlugin"><a href="#loadPlugin" class="headerlink" title="loadPlugin"></a>loadPlugin</h2><ul>
+<li>是谁在调用loadPlugin?  load_plugins.js!<br>loadModuleList将package.json中的dev提取出来，在loadModules中调用ctx.loadPlugin(path)进行map.<br>至于loadPlugin,既是module又是vm的，很吓人。</li>
+<li>runInThisContext<br>var fn = vm.runInThisContext(script, path);<br>是在\hexo-deployer-git\index.js的path下执行它自己：hexo.extend.deployer.register(‘git’, require(‘./lib/deployer’));register结束后可以在self.extend.deployer.store访问到这么一个东西：<br><code>{ git: [Function: val] }</code>.</li>
+</ul>
+<h2 id="hexo-generate过程"><a href="#hexo-generate过程" class="headerlink" title="hexo generate过程"></a>hexo generate过程</h2><ul>
+<li>hexo-fs是自己定义的file库</li>
+<li>hexo-util   CacheStream()</li>
+</ul>
+<p>hexo/extend<br>hexo/plugins<br>hexo-renderer-ejs   ejs</p>
+<h2 id="构造函数们"><a href="#构造函数们" class="headerlink" title="构造函数们"></a>构造函数们</h2><h4 id="Console"><a href="#Console" class="headerlink" title="Console()"></a>Console()</h4><ul>
+<li>hexo-cli/lib/extend/console</li>
+<li>this —store,alias</li>
+<li>prototype — get,list,register</li>
+<li>hexo.extend.console</li>
+</ul>
+<h4 id="Box"><a href="#Box" class="headerlink" title="Box()"></a>Box()</h4><ul>
+<li>EventEmitter.call(this);</li>
+<li>require(‘util’).inherits(Box, EventEmitter);</li>
+</ul>
+<h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo()"></a>Hexo()</h4><ul>
+<li>hexo.log.debug/info<h6 id="this"><a href="#this" class="headerlink" title="this"></a>this</h6></li>
+<li>this.source = new Source(this)    继承BOX</li>
+<li>this.theme  | this.locals</li>
+<li>EventEmitter.call(this);</li>
+</ul>
+<h6 id="init"><a href="#init" class="headerlink" title="init()"></a>init()</h6><ul>
+<li>require(‘../plugins/console’)(this);这样加载六大插件</li>
+<li>调用load_config,load_plugins，update_package，然后execFilter(‘after_init’,…)  this.extend.filter</li>
+<li>emit(“ready”)<h6 id="load"><a href="#load" class="headerlink" title="load()"></a>load()</h6>一切plugins和extend都加载好后</li>
+<li>loadDatabase    hexo.database  .options .load()</li>
+<li>self.source.process(), self.theme.process()</li>
+</ul>
+<h6 id="Hexo-prototype-generate"><a href="#Hexo-prototype-generate" class="headerlink" title="Hexo.prototype._generate()"></a><code>Hexo.prototype._generate()</code></h6><ul>
+<li>emit – generateBefore | generateAfter</li>
+<li>return self.execFilter(‘after_generate’, null, {context: self});</li>
+</ul>
+
       
 
       
@@ -202,7 +535,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/22/using-hexo/">阅读全文 >></a>
+          <a class="article-more-a" href="/2018/01/22/generate/">阅读全文 >></a>
         </p>
       
 
@@ -232,33 +565,18 @@
 
 
   
-    <article id="post-panda kill7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-BoxModel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/panda kill7/">panda kill 第七季</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/22/panda kill7/" class="archive-article-date">
-  	<time datetime="2017-10-22T08:05:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-22</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一局"><a href="#第一局" class="headerlink" title="第一局"></a>第一局</h2><p>6白狼王，2\5\8狼人，1预言家，12女巫，3守卫，11猎人。</p>
+        <h3 id="图解CSS"><a href="#图解CSS" class="headerlink" title="图解CSS"></a>图解CSS</h3><p>几种盒模型：inline,inline-block,block,table,absolute position,float， list-item<br>影响盒模型的属性:display,postion,float,  width,height,margin,padding,border</p>
 <ul>
-<li>狼人选1号做警长的首夜战术是怎么沟通的？<br>2号收到狼队友的金水，反而支持一号预言家。这个始终有点乱。<br>7号和9号太菜了，辣鸡村民。</li>
+<li>box-sizing:border-box也包含了padding;</li>
+<li>自由缩放属性 resize 针对具有overflow属性的容器元素，textarea自带</li>
+<li>outline 不影响盒模型  获得焦点时</li>
 </ul>
-        
-          <a class="article-more-a" href="/2017/10/22/panda kill7/#more">more >></a>
-        
+
       
 
       
@@ -270,7 +588,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/22/panda kill7/">阅读全文 >></a>
+          <a class="article-more-a" href="/2018/01/22/BoxModel/">阅读全文 >></a>
         </p>
       
 
@@ -300,27 +618,27 @@
 
 
   
-    <article id="post-css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="tags-echarts" class="article article-type-tags  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/css/">CSS展示</a>
+      <a class="article-title" href="/2018/01/22/echarts/">echarts</a>
     </h1>
   
 
         
-        <a href="/2017/10/22/css/" class="archive-article-date">
-  	<time datetime="2017-10-22T07:40:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-22</time>
+        <a href="/2018/01/22/echarts/" class="archive-article-date">
+  	<time datetime="2018-01-22T08:15:30.954Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://hhh.awecg.me/my/show/magicalCanvas.html" target="_blank" rel="external">魔性黑白正方形</a></p>
+        <p>自GNSS实习中遇到数据需要统计为柱状图的问题，用了百度的echarts.<br>需要多条统计项时，可以要<code>color: [&#39;olive&#39;,&#39;red&#39;,&#39;blue&#39;]</code>来区分颜色。</p>
 
       
 
@@ -333,7 +651,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/22/css/">阅读全文 >></a>
+          <a class="article-more-a" href="/2018/01/22/echarts/">阅读全文 >></a>
         </p>
       
 
@@ -363,288 +681,10 @@
 
 
   
-    <article id="post-rex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/25/rex/">初探正则表达式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/25/rex/" class="archive-article-date">
-  	<time datetime="2017-09-25T11:01:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>什么属性，分组等语法先统统不管，把遇到的问题解决再说。</p>
-        
-          <a class="article-more-a" href="/2017/09/25/rex/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">RegExp</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/25/rex/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-game2048" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/25/game2048/">game2048</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/25/game2048/" class="archive-article-date">
-  	<time datetime="2017-09-25T10:40:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>接着把show做下去啊，花了一天时间，在GitHub上找了个五六star的现成项目，自己给添加了开始和结束的界面。可以<a href="http://hhh.awecg.me/my/show/2048" target="_blank" rel="external">试试呀</a><br>琢磨给开始界面绑定键盘事件。。</p>
-<h4 id="board"><a href="#board" class="headerlink" title="board"></a>board</h4><p><a href="http://hhh.awecg.me/my/show/board/user.html" target="_blank" rel="external">简单的排行榜</a><br>学习jquery的getJSON方法，搞不懂异步，最后用同步获取做了这个。chrome浏览器好像根本就不支持这个方法。firefox只是针对同步给出了警告。<br>本地的JSON文件获取一直有“XML解析错误的警告”。<br>还有就是页面需要继续完善，比如侧边栏，保持表格头部等等。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/25/game2048/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-reveal-for-PPT" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/reveal-for-PPT/">reveal for PPT</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/20/reveal-for-PPT/" class="archive-article-date">
-  	<time datetime="2017-09-20T11:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="使用reveal-js"><a href="#使用reveal-js" class="headerlink" title="使用reveal.js"></a>使用reveal.js</h3><p>之前幻想过这种操作。正好有人已经实现了。火速拿来玩玩。专选课的演讲就是它了！<a href="https://Benleie.github.io/my/show/reveal/" target="_blank" rel="external">地球物理</a><br>展示那天，下午赶着做这个PPT，而且遇到了点麻烦，就来不及预演了。结果本来要求十分钟以上的演讲被我磕磕绊绊折腾了将近四十分钟。<br>等讲完最后一页，跑下讲台，回到座，发现嗓子哑了[微笑脸]</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">show</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/20/reveal-for-PPT/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hhh" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/14/hhh/">大功告成，叭！</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/14/hhh/" class="archive-article-date">
-  	<time datetime="2017-09-14T12:26:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>跟着这篇<a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">hexo教程</a>,模仿桃子的<a href="http://taozit.com/" target="_blank" rel="external">博客</a>,采用<a href="http://litten.me/" target="_blank" rel="external">litten大神</a>的主题<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a>，搭建了这个破烂的二级域名站点<a href="http://hhh.awecg.me/" target="_blank" rel="external">hhh</a>  &nbsp;&nbsp;逃：(</p>
-<p>想问如何在主题之下自定义页面，<a href="http://hhh.awecg.me/my/666" target="_blank" rel="external">比如</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/14/hhh/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -734,11 +774,31 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">show</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">头大</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">UI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">instruction</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">show</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -750,7 +810,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
               </li>
             
             <div class="clearfix"></div>

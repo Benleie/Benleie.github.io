@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2018%2F01%2F22%2Fsae%2F</url>
+    <content type="text"><![CDATA[渣浪的node部署指南说的很清楚。无非就是注册一个SAE账号，用git提交一个远程库。确实方便。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[again]]></title>
+    <url>%2F2018%2F01%2F22%2Fhexo%2F</url>
+    <content type="text"><![CDATA[hexo.js是从哪里开始加载的？我不得不对此感到疑惑？hexo命令不显示hexo.js中的console.log!!!与node debug ./node_modules/hexo/bin/hexo g略有不同hexo.js完成的任务主要有new Hexo(),init(),exit(). 配置hexo. hexo init即可快速开始一个库，如果仅仅是调试的话用他就够了。安装hexo-deploy-git后，created a lockfile as package-lock.json. You should commit this file。这是npm模仿yarn的版本锁定，可以还原开发环境。 当我把config中的url的root设为空时，Cannot read property &#39;replace&#39; of nullhexo\lib\hexo\load_config.js:34:30.原来是这玩意儿在解释YHML，加载配置。 github显示还是benleie在提交这个项目？？修改config的用户名解决 如何设置url的root，让它成功到blog目录？？新建一个库,开启github pages即可。问题很多 hexo加载了hexo-renderer-stylus模块来编译CSS，但是yilia使用了SCSS??]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F01%2F22%2Fnode%2F</url>
+    <content type="text"><![CDATA[debug模式 backtrace, bt - Print backtrace of current execution frame显示调用栈，不包括require restart 快速重启 repl 交互式 c继续 module.exports与exportsexports.camelCaseKeys = require(‘./camel_case_keys’);module.exports = entry; require.resolve fs.readFileSync(path.join(__dirname, &#39;./assets/some-file.txt&#39;));等同于fs.readFileSync(require.resolve(&#39;./assets/some-file.txt&#39;)); 省略了一道检查文件是否存在的工序 (fs.exists).]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[gitbash]]></title>
+    <url>%2F2018%2F01%2F22%2Fgitbash%2F</url>
+    <content type="text"><![CDATA[git clone指定分支git clone -b refactor https://github.com/maroslaw/rainyday.js.git stop 创建一个新库，很简单。在官网new repo,然后github在你没有readme的时候会有提示页面，照做就行。git init一下，在github网上 new repo，然后123456echo &quot;# awecg.github.io&quot; &gt;&gt; README.mdgit initgit add README.mdgit commit -m &quot;first commit&quot;git remote add origin https://github.com/awecg/awecg.github.io.gitgit push -u origin master 另:git pull –rebase origin master(如果创建库时生成了README.md，即README.md不在本地文件目录) 使用多个git账号 创建公钥和密钥ssh-keygen -t rsa -f test -C &quot;test key&quot;创建公钥和密钥 $ ssh-agent bash $ ssh-add ~/.ssh/test Identity added: /c/Users/我/.ssh/test (/c/Users/我/.ssh/test) 配置ssh的config文件 12$ ssh -T git@github.comHi Benleie! You&apos;ve successfully authenticated, but GitHub does not provide shell access. git remote set-url origin git push -u origin master 查看gitconfig git config –list查看远程仓库信息 git remote show origin查看远程仓库 git remote -v AUTOCRLF warning: LF will be replaced by CRLF in XXXXX.The file will have its original line endings in your working directory. 关于autocrlf。windows系统下，如果git add提交到stage的文件时unix格式，就有上面的提示。意思是core.autocrlf默认为true，提交到index后会自动转为lf endings，方便项目跨平台使用。 权宜之计：为了git bash不被这种提示刷屏，可以将true改为false，反正只是在windows下自己玩。 commit阅读利器gitk]]></content>
+      <tags>
+        <tag>git</tag>
+        <tag>instruction</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[generate]]></title>
+    <url>%2F2018%2F01%2F22%2Fgenerate%2F</url>
+    <content type="text"><![CDATA[node debug ./node_modules/hexo/bin/hexo g hexo g –debug死循环 loadPlugin 是谁在调用loadPlugin? load_plugins.js!loadModuleList将package.json中的dev提取出来，在loadModules中调用ctx.loadPlugin(path)进行map.至于loadPlugin,既是module又是vm的，很吓人。 runInThisContextvar fn = vm.runInThisContext(script, path);是在\hexo-deployer-git\index.js的path下执行它自己：hexo.extend.deployer.register(‘git’, require(‘./lib/deployer’));register结束后可以在self.extend.deployer.store访问到这么一个东西：{ git: [Function: val] }. hexo generate过程 hexo-fs是自己定义的file库 hexo-util CacheStream() hexo/extendhexo/pluginshexo-renderer-ejs ejs 构造函数们Console() hexo-cli/lib/extend/console this —store,alias prototype — get,list,register hexo.extend.console Box() EventEmitter.call(this); require(‘util’).inherits(Box, EventEmitter); Hexo() hexo.log.debug/infothis this.source = new Source(this) 继承BOX this.theme | this.locals EventEmitter.call(this); init() require(‘../plugins/console’)(this);这样加载六大插件 调用load_config,load_plugins，update_package，然后execFilter(‘after_init’,…) this.extend.filter emit(“ready”)load()一切plugins和extend都加载好后 loadDatabase hexo.database .options .load() self.source.process(), self.theme.process() Hexo.prototype._generate() emit – generateBefore | generateAfter return self.execFilter(‘after_generate’, null, {context: self});]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F01%2F22%2FBoxModel%2F</url>
+    <content type="text"><![CDATA[图解CSS几种盒模型：inline,inline-block,block,table,absolute position,float， list-item影响盒模型的属性:display,postion,float, width,height,margin,padding,border box-sizing:border-box也包含了padding; 自由缩放属性 resize 针对具有overflow属性的容器元素，textarea自带 outline 不影响盒模型 获得焦点时]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[echarts]]></title>
+    <url>%2F2018%2F01%2F22%2Fecharts%2F</url>
+    <content type="text"><![CDATA[自GNSS实习中遇到数据需要统计为柱状图的问题，用了百度的echarts.需要多条统计项时，可以要color: [&#39;olive&#39;,&#39;red&#39;,&#39;blue&#39;]来区分颜色。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[bootstrap]]></title>
+    <url>%2F2018%2F01%2F22%2Fbootstrap%2F</url>
+    <content type="text"><![CDATA[modal如何显示在屏幕正中心？ 简书 tooltip，只有一个左下角方向的显示??$(&#39;[data-toggle=&quot;tooltip&quot;]&#39;).tooltip(&#39;show&#39;),发现压根就没有激活. 如果没有data-placement，默认top;如果data-placement为””,默认right? tooltip的字体大小，背景颜色。。 @link-hover-color style标签的a:hover不能改变navbar-nav里a的背景颜色，只能用JS改变inline-style了。 rgba(0,0,0,.65) opacity; calc(100% - 85px) 无法用%设置textarea的height,无论是style标签还是js。 textarea下面莫名其妙留出一段空白。display：block； 试着用carousel做轮播图。 carousel-indicators完全没用是吧？ 用img {height:400px}无法修改图片大小，可能bootstrap做了优先级更高的imporant的设置吧。如何解决图片大小适应问题？ 鼠标悬停会影响轮播；]]></content>
+      <tags>
+        <tag>UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ajax]]></title>
+    <url>%2F2018%2F01%2F22%2Fajax%2F</url>
+    <content type="text"><![CDATA[关于ajax，json的后端数据处理。 ajax与HTTP请求的区别 JSON-server,superagent,axios的作用区别？ axios:Promise based HTTP client for the browser and node.js理由:jquery自3.0版本才支持Promise,如果你只是想使用jquery的ajax的话引入整个jquery是很大的负担，所以axios是一个很好的工具。(axios代码量只有jquery的十分之一，减少执行时间)。同时提供了其他features。]]></content>
+      <tags>
+        <tag>javascript</tag>
+        <tag>http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F01%2F22%2FblueBirld%2F</url>
+    <content type="text"><![CDATA[asCallback callback可以为null 可以接收error]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[sematic]]></title>
+    <url>%2F2018%2F01%2F22%2Fsemantic%2F</url>
+    <content type="text"><![CDATA[同一个div的button可以自动实现水平布局。button是可变元素，可以变为块级元素或内联元素。 设计了一些icon，可以在i中自由调用]]></content>
+      <tags>
+        <tag>UI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用hexo]]></title>
     <url>%2F2018%2F01%2F22%2Fusing-hexo%2F</url>
     <content type="text"><![CDATA[hexo server模式可以在localhost预览站点；在修改文章之后,直接在浏览器刷新就能查看，相当于有个watch的功能 图片 主题yilia将&lt;!-- more --&gt;添加到写作的md中，即可在你想要的位置截断。在config设置excerpt_link可以修改其内容 分类？ archive？ 文章删除后tags还在？ 显示文章更新日期]]></content>
