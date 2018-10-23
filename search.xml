@@ -10,11 +10,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F01%2F22%2Fnode%2F</url>
-    <content type="text"><![CDATA[debug模式 backtrace, bt - Print backtrace of current execution frame显示调用栈，不包括require restart 快速重启 repl 交互式 c继续 module.exports与exportsexports.camelCaseKeys = require(‘./camel_case_keys’);module.exports = entry; require.resolve fs.readFileSync(path.join(__dirname, &#39;./assets/some-file.txt&#39;));等同于fs.readFileSync(require.resolve(&#39;./assets/some-file.txt&#39;)); 省略了一道检查文件是否存在的工序 (fs.exists).]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[again]]></title>
     <url>%2F2018%2F01%2F22%2Fhexo%2F</url>
     <content type="text"><![CDATA[hexo.js是从哪里开始加载的？我不得不对此感到疑惑？hexo命令不显示hexo.js中的console.log!!!与node debug ./node_modules/hexo/bin/hexo g略有不同hexo.js完成的任务主要有new Hexo(),init(),exit(). 配置hexo. hexo init即可快速开始一个库，如果仅仅是调试的话用他就够了。安装hexo-deploy-git后，created a lockfile as package-lock.json. You should commit this file。这是npm模仿yarn的版本锁定，可以还原开发环境。 当我把config中的url的root设为空时，Cannot read property &#39;replace&#39; of nullhexo\lib\hexo\load_config.js:34:30.原来是这玩意儿在解释YHML，加载配置。 github显示还是benleie在提交这个项目？？修改config的用户名解决 如何设置url的root，让它成功到blog目录？？新建一个库,开启github pages即可。问题很多 hexo加载了hexo-renderer-stylus模块来编译CSS，但是yilia使用了SCSS??]]></content>
@@ -22,6 +17,11 @@
         <tag>hexo</tag>
         <tag>node.js</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F01%2F22%2Fnode%2F</url>
+    <content type="text"><![CDATA[debug模式 backtrace, bt - Print backtrace of current execution frame显示调用栈，不包括require restart 快速重启 repl 交互式 c继续 module.exports与exportsexports.camelCaseKeys = require(‘./camel_case_keys’);module.exports = entry; require.resolve fs.readFileSync(path.join(__dirname, &#39;./assets/some-file.txt&#39;));等同于fs.readFileSync(require.resolve(&#39;./assets/some-file.txt&#39;)); 省略了一道检查文件是否存在的工序 (fs.exists).]]></content>
   </entry>
   <entry>
     <title><![CDATA[gitbash]]></title>
