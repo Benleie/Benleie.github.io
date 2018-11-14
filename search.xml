@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2018%2F11%2F14%2Fnow1114%2F</url>
+    <content type="text"><![CDATA[微信小程序开发入门 七月 5require相对路径]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[ajax]]></title>
     <url>%2F2018%2F01%2F30%2Fajax%2F</url>
     <content type="text"><![CDATA[关于ajax，json的后端数据处理。 ajax与HTTP请求的区别 JSON-server,superagent,axios的作用区别？ axios:Promise based HTTP client for the browser and node.js理由:jquery自3.0版本才支持Promise,如果你只是想使用jquery的ajax的话引入整个jquery是很大的负担，所以axios是一个很好的工具。(axios代码量只有jquery的十分之一，减少执行时间)。同时提供了其他features。]]></content>
@@ -41,14 +46,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[echarts]]></title>
-    <url>%2F2018%2F01%2F22%2Fecharts%2F</url>
-    <content type="text"><![CDATA[自GNSS实习中遇到数据需要统计为柱状图的问题，用了百度的echarts.需要多条统计项时，可以要color: [&#39;olive&#39;,&#39;red&#39;,&#39;blue&#39;]来区分颜色。]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>%2F2018%2F01%2F22%2FBoxModel%2F</url>
     <content type="text"><![CDATA[图解CSS几种盒模型：inline,inline-block,block,table,absolute position,float， list-item影响盒模型的属性:display,postion,float, width,height,margin,padding,border box-sizing:border-box也包含了padding; 自由缩放属性 resize 针对具有overflow属性的容器元素，textarea自带 outline 不影响盒模型 获得焦点时]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[echarts]]></title>
+    <url>%2F2018%2F01%2F22%2Fecharts%2F</url>
+    <content type="text"><![CDATA[自GNSS实习中遇到数据需要统计为柱状图的问题，用了百度的echarts.需要多条统计项时，可以要color: [&#39;olive&#39;,&#39;red&#39;,&#39;blue&#39;]来区分颜色。]]></content>
   </entry>
   <entry>
     <title><![CDATA[bootstrap]]></title>
